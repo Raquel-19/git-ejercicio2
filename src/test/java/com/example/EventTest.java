@@ -103,7 +103,12 @@ class EventTest {
     @DisplayName("Añadir un oyente")
     void addSpeaker() {
 
+        Event event = new Event();
+        Speaker speaker = new Speaker(7l, "name", "Aa");
 
+        event.addSpeaker(speaker);
+        assertEquals(7, event.getSpeakers().get(0).getId());
+        System.out.println(event.getSpeakers().get(0).getId());
 
     }
 
