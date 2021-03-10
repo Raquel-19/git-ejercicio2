@@ -73,7 +73,18 @@ class EventTest {
     @DisplayName("Quitar asistentes de una lista")
     void removeAttendees() {
 
+        Event event = new Event();
+        Attendee attendee = new Attendee(5l, "name", "email.com");
+        Attendee attendee2 = new Attendee(6l, "nam2", "email2.com");
+        List<Attendee> attendees = new ArrayList<>();
 
+        attendees.add(attendee);
+        attendees.add(attendee2);
+        event.addAttendees(attendees);
+        assertTrue(event.getAttendees().size() > 0);
+        event.removeAttendees(attendees);
+        System.out.println(event.getAttendees().size());
+        assertTrue(event.getAttendees().size() == 0);
 
     }
 
