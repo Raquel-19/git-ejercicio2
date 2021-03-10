@@ -58,6 +58,14 @@ class EventTest {
     @DisplayName("Quitar un asistente")
     void removeAttendee() {
 
+        Event event = new Event();
+        Attendee attendee = new Attendee(4l, "name", "email.com");
+
+        event.addAttendee(attendee);
+        assertTrue(event.getAttendees().size() > 0);
+        event.removeAttendee(attendee);
+        assertTrue(event.getAttendees().size() == 0);
+        System.out.println(event.getAttendees().size());
 
     }
 
