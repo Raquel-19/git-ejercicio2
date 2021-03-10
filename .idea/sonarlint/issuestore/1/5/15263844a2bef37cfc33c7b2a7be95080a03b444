@@ -1,11 +1,15 @@
 
-6
-java:S5785O"Use assertEquals instead.(ÙíÊà8Åêî¢/
-6
-java:S5785="Use assertEquals instead.(ÙíÊà8åòÈıÿ.
-6
-java:S5785/"Use assertEquals instead.(Ì¦8‹™Åıÿ.
-8
-java:S5785s"Use assertNotEquals instead.(”­µM8 ÷•/
+J
+java:S2699c"-Add at least one assertion to this test case.(§Ù’ß8÷ùá/
 <
-java:S5785."Use assertNotNull instead.(Ìç×áÿÿÿÿÿ8¾ˆÄıÿ.
+java:S57852"Use assertNotNull instead.(Ìç×áÿÿÿÿÿ8¦˜Şâ/
+6
+java:S5785W"Use assertEquals instead.(ÙíÊà8Üèæâ/
+O
+java:S2699]"-Add at least one assertion to this test case.(ø…Îÿùÿÿÿÿ8™’ùá/
+6
+java:S5785C"Use assertEquals instead.(ÙíÊà8¾¤ãâ/
+I
+java:S2699k"-Add at least one assertion to this test case.(ûş¸8 áúá/
+6
+java:S57853"Use assertEquals instead.(Ì¦8¦˜Şâ/

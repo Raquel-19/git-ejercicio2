@@ -19,3 +19,5 @@ w
 Gsrc/test/java/com/example/service/EventNotificationServiceImplTest.java,9\2\920d14e5959ad8a65b88609aafafffb501038f14
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+=
+proyecto2.iml,2\7\270fd6a9d5ffb9cea8d687bbf72e21d413891a59

@@ -92,6 +92,11 @@ class EventTest {
     @DisplayName("Notificar a todos los asistentes con Mockito")
     void notifyAssistants() {
 
+        ArgumentCaptor <Event> argumentCaptor = ArgumentCaptor.forClass(Event.class);
+        Event event = new Event(1l, "AA", EventType.TECH, eventNotificationService);
+        event.notifyAssistants();
+        Mockito.verify(eventNotificationService, Mockito.times(1)).announce(argumentCaptor.capture());
+
     }
 
     @Test
