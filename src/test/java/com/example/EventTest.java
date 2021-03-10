@@ -39,6 +39,18 @@ class EventTest {
     @DisplayName("Añadir asistentes a una lista")
     void addAttendees() {
 
+        Event event = new Event();
+        Attendee attendee = new Attendee(2l, "name", "email.com");
+        Attendee attendee2 = new Attendee(3l, "nam2", "email2.com");
+        List<Attendee> attendees = new ArrayList<>();
+
+        attendees.add(attendee);
+        attendees.add(attendee2);
+        event.addAttendees(attendees);
+        assertTrue(event.getAttendees() != null);
+        assertTrue(event.getAttendees().size() == 2);
+        System.out.println(event.getAttendees().get(0).getId());
+        System.out.println(event.getAttendees().get(1).getId());
 
     }
 
