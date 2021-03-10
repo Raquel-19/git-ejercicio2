@@ -34,7 +34,16 @@ class EventNotificationServiceImplTest {
     @DisplayName("Confirmar comunicado con Mockito ")
     void announce() {
 
-
+        Event event = new Event(1l, "AA", EventType.BUSINESS, eventNotificationServiceImpl);
+        List<Attendee> attendees = new ArrayList<>();
+        Attendee attendee = new Attendee(
+                1l,
+                "name",
+                "nam@email"
+        );
+        event.addAttendee(attendee);
+        eventNotificationServiceImpl.announce(event);
+        System.out.println(attendee.getNotifications());
     }
 
 
