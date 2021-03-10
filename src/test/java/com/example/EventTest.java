@@ -25,6 +25,13 @@ class EventTest {
     @DisplayName("Añadir un asistente")
     void addAttendee() {
 
+        Event event = new Event();
+        Attendee attendee = new Attendee(1l, "name", "email.com");
+
+        event.addAttendee(attendee);
+        assertEquals(1, event.getAttendees().get(0).getId());
+        assertTrue(event.getAttendees().size() > 0);
+        System.out.println(event.getAttendees().get(0).getId());
 
     }
 
