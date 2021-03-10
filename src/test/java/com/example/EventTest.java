@@ -116,6 +116,18 @@ class EventTest {
     @DisplayName("Quitar un oyente")
     void removeSpeaker() {
 
+        Event event = new Event();
+        Speaker speaker = new Speaker(8l, "name", "Aa");
+        Speaker speaker2 = new Speaker(9l, "nam2", "Bb");
+        Speaker speaker3 = new Speaker(10l, "nam3", "Cc");
+
+        event.addSpeaker(speaker);
+        event.addSpeaker(speaker2);
+        event.addSpeaker(speaker3);
+        event.removeSpeaker(speaker2);
+        assertFalse(event.getSpeakers().size() == 3);
+        System.out.println(event.getSpeakers().get(0).getId());
+        System.out.println(event.getSpeakers().get(1).getId());
 
     }
 }
