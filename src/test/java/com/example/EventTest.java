@@ -1,7 +1,6 @@
 package com.example;
 
 import com.example.service.EventNotificationService;
-import com.example.service.EventNotificationServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -100,6 +99,28 @@ class EventTest {
     }
 
     @Test
+    @DisplayName("Comprobar setters y toString de asistentes")
+    void settersAttendee () {
+
+        Attendee attendee = new Attendee();
+
+
+        attendee.setId(11L);
+        attendee.setNickname("nam");
+        attendee.setEmail("nam@gmail.com");
+
+        assertEquals(11, attendee.getId());
+        assertEquals("nam",attendee.getNickname());
+        assertEquals("nam@gmail.com", attendee.getEmail());
+
+        System.out.println(attendee.getId());
+        System.out.println(attendee.getNickname());
+        System.out.println(attendee.getEmail());
+        System.out.println(attendee.toString());
+
+    }
+
+    @Test
     @DisplayName("Añadir un oyente")
     void addSpeaker() {
 
@@ -128,6 +149,36 @@ class EventTest {
         assertFalse(event.getSpeakers().size() == 3);
         System.out.println(event.getSpeakers().get(0).getId());
         System.out.println(event.getSpeakers().get(1).getId());
+
+    }
+
+    @Test
+    @DisplayName ("Comprobar setters de oyente")
+    void setterSpeaker () {
+        Event event = new Event();
+        Speaker speaker = new Speaker();
+
+        speaker.setId(12L);
+        speaker.setName("nam");
+        speaker.setExpertise("Dd");
+        event.addSpeaker(speaker);
+        assertEquals(12, event.getSpeakers().get(0).getId());
+        assertEquals("nam", event.getSpeakers().get(0).getName());
+        assertEquals("Dd", event.getSpeakers().get(0).getExpertise());
+        System.out.println(event.getSpeakers().get(0).getId());
+        System.out.println(event.getSpeakers().get(0).getName());
+        System.out.println(event.getSpeakers().get(0).getExpertise());
+    }
+
+    @Test
+    @DisplayName ("Comprobar setters de notificacion")
+    void setterNotification () {
+
+        Notification notification = new Notification();
+        notification.setMessage("message1");
+
+        assertEquals("message1", notification.getMessage());
+        System.out.println(notification.getMessage());
 
     }
 }
