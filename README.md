@@ -7,7 +7,7 @@ This is an exclusively testing project that also uses Mockito. It is a suitable 
 The project was carried out in IntelliJ IDEA and several plugins were added:
 + Git Flow Integration
 + GitToolBox
-+ SonarLint (optional)
++ SonarLint (recommended)
 
 ### About me! 👩🏾‍💻  
 
